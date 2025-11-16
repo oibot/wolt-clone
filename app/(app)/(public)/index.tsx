@@ -6,6 +6,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import {
   Image,
   Linking,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -35,7 +36,8 @@ export default function Page() {
           }}
         />
       </View>
-      <View style={styles.contentContainer}>
+
+      <ScrollView contentContainerStyle={styles.contentContainer}>
         <Image
           source={require("@/assets/images/wolt-logo.png")}
           style={styles.brandlogo}
@@ -69,7 +71,7 @@ export default function Page() {
             to learn more about personal data processing at Wolt.
           </Text>
         </Animated.View>
-      </View>
+      </ScrollView>
     </View>
   );
 }
