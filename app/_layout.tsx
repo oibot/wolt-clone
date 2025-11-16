@@ -3,19 +3,19 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import * as SplashSceen from "expo-splash-screen";
+import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
-SplashSceen.preventAutoHideAsync();
+SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({ Nunito_700Bold, Nunito_900Black });
 
   useEffect(() => {
     if (loaded || error) {
-      SplashSceen.hideAsync();
+      SplashScreen.hideAsync();
     }
   }, [loaded, error]);
 
